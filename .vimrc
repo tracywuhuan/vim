@@ -12,6 +12,9 @@ let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
 "winmanager
 nmap wm :WMToggle<cr>
+"Taglist
+nmap to :TlistToggle<cr>
+nmap tc :TlistClose<cr>
 
 "switch
 nmap qq <C-w><C-w>

@@ -9,6 +9,7 @@ let Tlist_Exit_OnlyWindow=1
 let g:winManagerWIndowLayout='FileExplorer|TagList'
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+let g:ycm_min_num_of_chars_for_completion = 1
 
 "winmanager
 nmap wm :WMToggle<cr>

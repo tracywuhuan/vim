@@ -1,3 +1,4 @@
+"prep: ctags cscope YouCompleteMe 
 syntax enable
 syntax on
 "set background=dark
@@ -23,7 +24,7 @@ let g:ycm_seed_identifiers_with_syntax=1
 "winmanager
 nmap wm :WMToggle<cr>
 nmap wc :WMClose<cr>
-"Taglist
+"Tagbar
 nmap to :Tagbar<cr>
 nmap tc :TagbarClose<cr>
 
@@ -31,6 +32,8 @@ nmap tc :TagbarClose<cr>
 nmap qq <C-w><C-w>
 :set cscopequickfix=s-,c-,d-,i-,t-,e-
 
+"cscope usage: Under source code dir-> cscope -Rbq *
+"then add the output file
 "cscope shortcut
 nmap <leader>sa :cs add cscope.out<cr>
 nmap <leader>ss :cs find s <C-R>=expand("<cword>")<CR><CR>
@@ -55,28 +58,31 @@ nmap <F7> :cn<cr>
 nnoremap <silent> <F3> :Grep<CR>
 
 set nocompatible              " be iMproved  
-  
-set rtp+=~/.vim/bundle/vundle/  
-call vundle#rc()  
+
+"old vundle
+"set rtp+=~/.vim/bundle/vundle/  
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()  
   
 " let Vundle manage Vundle  
 " required!  
-Bundle 'gmarik/vundle'  
-  
+" old vundle 
+"Plugin 'gmarik/vundle'  
+Plugin 'VundleVim/Vundle.vim'
+
 " My bundles here:  
 "  
 " original repos on GitHub  
-Bundle 'tpope/vim-fugitive'  
-Bundle 'Lokaltog/vim-easymotion'  
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}  
-Bundle 'tpope/vim-rails.git'  
+Plugin 'tpope/vim-fugitive'  
+Plugin 'Lokaltog/vim-easymotion'  
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}  
+Plugin 'tpope/vim-rails.git'  
 " vim-scripts repos  
-Bundle 'L9'  
-Bundle 'FuzzyFinder'  
+Plugin 'L9'  
+Plugin 'FuzzyFinder'  
 " non-GitHub repos  
-Bundle 'git://git.wincent.com/command-t.git'  
-" Git repos on your local machine (i.e. when working on your own plugin)  
-Bundle 'file:///Users/gmarik/path/to/plugin'  
+Plugin 'git://git.wincent.com/command-t.git'  
 " ...  
-Bundle 'Valloric/YouCompleteMe'  
+Plugin 'Valloric/YouCompleteMe'  
+call vundle#end()
 filetype plugin indent on     " required!

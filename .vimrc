@@ -1,8 +1,8 @@
-"prep: ctags cscope YouCompleteMe 
+"prep: install vundle ctags cscope YouCompleteMe 
 syntax enable
 syntax on
 "set background=dark
-colorscheme desert
+colorscheme smyck
 set nu
 let mapleader=","
 
